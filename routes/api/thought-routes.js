@@ -4,14 +4,14 @@ const {
   removeThought,
   addReaction,
   removeReaction,
-} = require("../../controllers/comment-controller");
+} = require("../../controllers/thought-controller");
 
 module.exports = router;
 
-// /api/comments/<userId>
+// /api/thoughts/<userId>
 router.route('/:userId').post(addThought);
 
-// /api/comments/<userId>/<thoughtId>
+// /api/thoughts/<userId>/<thoughtId>
 router
 .route('/:userId/:thoughtId')
 .put(addReaction)

@@ -2,7 +2,7 @@ const { Schema, model, Types } = require("mongoose");
 
 const ReactionSchema = new Schema(
   {
-    // set custom id to avoid confusion with parent comment's _id field
+    // set custom id to avoid confusion with parent thought's _id field
     replyReactionId: {
       type: Schema.Types.ObjectId,
       default: () => new Types.ObjectId(),
