@@ -1,6 +1,18 @@
 const { Thought, User } = require("../models");
 
+
+
 const thoughtController = {
+//  get all thoughts
+  getAllThought(req, res) {
+    Thought.find({})
+      .then((dbUserData) => res.json(dbUserData))
+      .catch((err) => {
+        console.log(err);
+        res.status(400).json(err);
+      });
+  },
+
   // add thought to user
   addThought({ params, body }, res) {
     console.log(body);
@@ -39,15 +51,15 @@ const thoughtController = {
   },
 
   // remove reaction
-removeReaction({ params }, res) {
-  Thought.findOneAndUpdate(
-    { _id: params.thoughtId },
-    { $pull: { replies: { reactionId: params.reactionId } } },
-    { new: true }
-  )
-    .then(dbUserData => res.json(dbUserData))
-    .catch(err => res.json(err));
-},
+  removeReaction({ params }, res) {
+    Thought.findOneAndUpdate(
+      { _id: params.thoughtId },
+      { $pull: { replies: { reactionId: params.reactionId } } },
+      { new: true }
+    )
+      .then((dbUserData) => res.json(dbUserData))
+      .catch((err) => res.json(err));
+  },
 
   // remove thought
   removeThought({ params }, res) {

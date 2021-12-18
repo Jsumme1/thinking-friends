@@ -1,5 +1,6 @@
 const router = require("express").Router();
 const {
+  getAllThought,
   addThought,
   removeThought,
   addReaction,
@@ -8,8 +9,15 @@ const {
 
 module.exports = router;
 
+// Set up GET all and POST at /api/thought
+router
+  .route('/')
+  .get(getAllThought)
+  .post(addThought);
+
+
 // /api/thoughts/<userId>
-router.route('/:userId').post(addThought);
+// router.route('/:userId').post(addThought);
 
 // /api/thoughts/<userId>/<thoughtId>
 router
