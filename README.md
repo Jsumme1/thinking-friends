@@ -1,12 +1,11 @@
 # thinking-friends
   
-## This code creates the back end for a social media app - allowing one to create users, add friends, add "thought" and reactions to the thoughts.
-API routes have been established and checked in Insominia for the data generated and saved into a Mongoose DB.
+## Introduction
+This code creates the back end for a social media app - allowing one to create users, add friends, add "thought" and reactions to the thoughts. API routes have been established and checked in Insominia for the data generated and saved into a Mongoose DB.
 
 ## Table of Contents
 * [Installation](#installation)
 * [Usage](#usage)
-* [Images](#images)
 * [Contributions](#contributions)
 * [Video Link](#video)
 * [Software](#software)
@@ -29,9 +28,6 @@ THEN I am able to successfully create, update, and delete users and thoughts in 
 WHEN I test API POST and DELETE routes in Insomnia
 THEN I am able to successfully create and delete reactions to thoughts and add and remove friends to a user’s friend list
 
-
-## Images 
-![Example of command line output](images\ViewImages.JPG)
 
 ## Contributions
 Made by Julie
